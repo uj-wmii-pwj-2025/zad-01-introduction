@@ -3,7 +3,7 @@ package uj.wmii.pwj.introduction;
 public class QuadraticEquation {
 
     public double[] findRoots(double a, double b, double c) {
-        // What if a,b,c == 0 ?
+        // Since it is a quadratic equation, a is assumed to be nonzero.
 
         double D = b * b - 4 * a * c;
 
