@@ -1,5 +1,6 @@
 package uj.wmii.pwj.introduction;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -17,5 +18,10 @@ class QuadraticEquationTest {
            case 1 -> assertThat(result[0]).isCloseTo(expectedR1, offset(0.001));
            case 2 -> assertThat(result).containsOnly(new double[] {expectedR1, expectedR2}, offset(0.001));
         }
+    }
+    @Test()
+    void findRoots_allZeros() { //Test for case a=b=c=0
+        double[] result = new QuadraticEquation().findRoots(0,0,0);
+        assertThat(result).isEqualTo(null);
     }
 }
