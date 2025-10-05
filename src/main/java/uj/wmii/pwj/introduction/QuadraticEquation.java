@@ -9,9 +9,13 @@ public class QuadraticEquation {
         /* Infinite number of solutions case - not specified in the task
         Handling this case depends on whether we restrict values of a,b,c in any way
          */
-        if (a == 0 && b == 0 && c == 0) {
-            log.info("Provided equation is 0 = 0, therefore has infinite number of solutions.");
-            return null; //Handled differently than typical "No solutions case", as 0 = 0 is true for every x
+        if (a == 0) {
+            if (b == 0 && c == 0) {
+                log.info("Provided equation is 0 = 0, therefore has infinite number of solutions.");
+                return null; //Handled differently than typical "No solutions case", as 0 = 0 is true for every x
+            }
+            double x = -c / b;
+            return new double[]{x};
         }
 
         double delta = b * b - 4.0 * a * c;
