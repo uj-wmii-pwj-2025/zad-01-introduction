@@ -14,11 +14,14 @@ public class QuadraticEquation {
           return new double[] {c / b};  
         } 
 
-        double delta = Math.pow(a , 2) - 4 * a * c;
+        double delta = Math.pow(b , 2) - 4 * a * c;
+        
+        if (delta < 0) return new double[]{};
+        
+        double x1 = (-b - Math.sqrt(delta) ) / (2 * a);
+        double x2 = (-b + Math.sqrt(delta) ) / (2 * a);
 
-        double x1 = (-b - Math.sqrt(delta) ) / 4 * a;
-        double x2 = (-b + Math.sqrt(delta) ) / 4 * a;
-
+        if (delta == 0.0) return new double[]{x1};
         return new double[]{x1, x2};
     }
 

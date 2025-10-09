@@ -1,8 +1,5 @@
 package uj.wmii.pwj.introduction;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Banner {
     private static final int HEIGHT = 7;
     private static final int SPACE_WIDTH = 4;
